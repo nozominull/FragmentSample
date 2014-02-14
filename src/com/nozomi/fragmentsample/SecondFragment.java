@@ -35,7 +35,7 @@ public class SecondFragment extends BackFragment {
 
 	@Override
 	public void onBackPressed() {
-		((MainActivity) getActivity()).setFrament("FirstFragment",
+		((MainActivity) getActivity()).setFrament(MainActivity.FragmentName.FirstFragment,
 				null);
 	}
 }

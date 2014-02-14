@@ -14,8 +14,8 @@ public class ThirdFragment extends BackFragment {
 
 	@Override
 	public void setBundle(Bundle bundle) {
-		if(bundle!=null){
-		value = bundle.getInt("value");
+		if (bundle != null) {
+			value = bundle.getInt("value");
 		}
 	}
 
@@ -45,8 +45,8 @@ public class ThirdFragment extends BackFragment {
 
 			@Override
 			public void onClick(View v) {
-				((MainActivity) getActivity())
-						.setFrament("ThirdFragment", null);
+				((MainActivity) getActivity()).setFrament(
+						MainActivity.FragmentName.ThirdFragment, null);
 			}
 		});
 
@@ -62,6 +62,7 @@ public class ThirdFragment extends BackFragment {
 
 	@Override
 	public void onBackPressed() {
-		((MainActivity) getActivity()).setFrament("FirstFragment", null);
+		((MainActivity) getActivity()).setFrament(
+				MainActivity.FragmentName.FirstFragment, null);
 	}
 }

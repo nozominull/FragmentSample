@@ -57,8 +57,8 @@ public class FirstFragment extends BackFragment {
 				Bundle bundle = new Bundle();
 				bundle.putInt("value", value);
 
-				((MainActivity) getActivity()).setFrament("ThirdFragment",
-						bundle);
+				((MainActivity) getActivity()).setFrament(
+						MainActivity.FragmentName.ThirdFragment, bundle);
 			}
 		});
 	}

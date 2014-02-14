@@ -16,6 +16,10 @@ public class MainActivity extends FragmentActivity {
 	private SecondFragment secondFragment = null;
 	private ThirdFragment thirdFragment = null;
 
+	public enum FragmentName {
+		FirstFragment, SecondFragment, ThirdFragment
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,7 +37,7 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void onClick(View v) {
-				setFrament("FirstFragment", null);
+				setFrament(FragmentName.FirstFragment, null);
 			}
 		});
 
@@ -42,25 +46,25 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void onClick(View v) {
-				setFrament("SecondFragment", null);
+				setFrament(FragmentName.SecondFragment, null);
 			}
 		});
 
-		setFrament("FirstFragment", null);
+		setFrament(FragmentName.FirstFragment, null);
 	}
 
-	public void setFrament(String name, Bundle bundle) {
-		if (name.equals("FirstFragment")) {
+	public void setFrament(FragmentName fragmentName, Bundle bundle) {
+		if (fragmentName == FragmentName.FirstFragment) {
 			if (firstFragment == null) {
 				firstFragment = new FirstFragment();
 			}
 			currentFragment = firstFragment;
-		} else if (name.equals("SecondFragment")) {
+		} else if (fragmentName == FragmentName.SecondFragment) {
 			if (secondFragment == null) {
 				secondFragment = new SecondFragment();
 			}
 			currentFragment = secondFragment;
-		} else if (name.equals("ThirdFragment")) {
+		} else if (fragmentName == FragmentName.ThirdFragment) {
 			if (thirdFragment == null) {
 				thirdFragment = new ThirdFragment();
 			}
