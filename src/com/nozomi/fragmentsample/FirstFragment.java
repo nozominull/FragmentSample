@@ -16,11 +16,6 @@ public class FirstFragment extends BackFragment {
 	private int value = 0;
 
 	@Override
-	public void setBundle(Bundle bundle) {
-
-	}
-
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 

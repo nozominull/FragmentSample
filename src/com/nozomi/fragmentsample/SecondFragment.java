@@ -8,11 +8,6 @@ import android.view.ViewGroup;
 public class SecondFragment extends BackFragment {
 
 	@Override
-	public void setBundle(Bundle bundle) {
-
-	}
-
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -22,7 +17,8 @@ public class SecondFragment extends BackFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		View view = inflater.inflate(R.layout.second_fragment, container, false);
+		View view = inflater
+				.inflate(R.layout.second_fragment, container, false);
 
 		initView(view);
 
@@ -35,7 +31,7 @@ public class SecondFragment extends BackFragment {
 
 	@Override
 	public void onBackPressed() {
-		((MainActivity) getActivity()).setFrament(MainActivity.FragmentName.FirstFragment,
-				null);
+		((MainActivity) getActivity()).setFrament(
+				MainActivity.FragmentName.FirstFragment, null);
 	}
 }

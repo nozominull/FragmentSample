@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 public abstract class BackFragment extends Fragment {
 	public abstract void onBackPressed();
 
-	public abstract void setBundle(Bundle bundle);
+	public void setBundle(Bundle bundle) {
+
+	}
 
 }
