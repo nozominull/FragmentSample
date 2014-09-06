@@ -1,8 +1,4 @@
 FragmentSample
 ==============
 
-the base framework of an android app.
-
-TODO:
-==============
-use FragmentTabHost or ViewPager&FragmentPagerAdapter.
+the base framework of an android app.show how to switch fragments.
